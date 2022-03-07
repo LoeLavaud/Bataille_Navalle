@@ -24,13 +24,7 @@ int tableau_adverse[10][10] = {//tableau de memoire des bateau
 };
 
 
-void score(){
-    for (int li = 0; li < 10; li++) {
-        for (int col = 0; col < 10; ++col) {
 
-        }
-    }
-}
 
 
 void AffichageTableau(){
@@ -59,26 +53,26 @@ void AffichageTableau(){
 
 void DemandeJouer(){
     do {
-        printf("\n\nQuelles case veux-tu jouer ?(colonne)");
+        printf("\n\nQuelles case veux-tu jouer ?(A-F)");
         scanf("%s", &ligne);
 
-        if (ligne >= 97 && ligne <= 106) {
+        if (ligne >= 97 && ligne <= 106) { //passer de lettres a chiffre avec la table ASCII
             ligne -= 97;
         } else {
             ligne -= 65;
         }
 
-        if (ligne >= 10 || ligne < 0) {
+        if (ligne >= 10 || ligne < 0) { //mettre une erreur si le chiffre n'est pas bon
             printf("coordonnée introuvable !!!");
         }
 
-    } while (ligne >= 10 || ligne < 0);
+    } while (ligne >= 10 || ligne < 0); //repeter jusqu'à se que le chiffre sois bon
 
     do {
-        printf("\nQuelles case veux-tu jouer ?(ligne)");
+        printf("\nQuelles case veux-tu jouer ?(1-10)");
         scanf("%d", &colonne);
 
-        colonne -= 1;
+        colonne -= 1;//toujours la table ASCII
 
         if (colonne >= 10 || colonne < 0) {
             printf("coordonnée introuvable !!!\n");
@@ -89,10 +83,10 @@ void DemandeJouer(){
 
 
 int main() {
-    SetConsoleOutputCP(65001);
+    SetConsoleOutputCP(65001);//pouvoir mettre des accents
 
 
-    printf("\nQue voulez-vous faire ?\n\n");
+    printf("\nQue voulez-vous faire ?\n\n");//menu
     printf("1 : Apprendre à jouer\n"
            "2 : Jouer contre un ordi\n"
            "3 : Jouer tout seul\n"
@@ -110,7 +104,7 @@ int main() {
 
                 DemandeJouer();
 
-                if (tableau_adverse[colonne][ligne] == 0) {
+                if (tableau_adverse[colonne][ligne] == 0) {//changer les chiffres du tableau pour pouvoir afficher l'endroit ou j'ai tirer
                     tableau_adverse[colonne][ligne] = 10;
                 }
                 if (tableau_adverse[colonne][ligne] == 1) {
