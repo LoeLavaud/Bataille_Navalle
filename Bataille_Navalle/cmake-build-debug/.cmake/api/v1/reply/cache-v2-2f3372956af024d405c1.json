@@ -11,7 +11,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/sl4sh/CLionProjects/Bataille_Navalle/cmake-build-debug"
+			"value" : "C:/Users/sl4sh/OneDrive/Documents/GitHub/Bataille_Navalle/Bataille_Navalle/cmake-build-debug"
 		},
 		{
 			"name" : "Bataille_Navalle_IS_TOP_LEVEL",
@@ -35,7 +35,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/sl4sh/CLionProjects/Bataille_Navalle"
+			"value" : "C:/Users/sl4sh/OneDrive/Documents/GitHub/Bataille_Navalle/Bataille_Navalle"
 		},
 		{
 			"name" : "CMAKE_ADDR2LINE",
@@ -91,7 +91,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "c:/Users/sl4sh/CLionProjects/Bataille_Navalle/cmake-build-debug"
+			"value" : "c:/Users/sl4sh/OneDrive/Documents/GitHub/Bataille_Navalle/Bataille_Navalle/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -515,7 +515,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Users/sl4sh/CLionProjects/Bataille_Navalle"
+			"value" : "C:/Users/sl4sh/OneDrive/Documents/GitHub/Bataille_Navalle/Bataille_Navalle"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
