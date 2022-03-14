@@ -13,28 +13,34 @@ int choix = 0, colonne = 1;
 int tableau_adverse[10][10] = {//tableau de memoire des bateau
         {0, 0, 0, 0, 1, 0, 0, 0, 0, 0},
         {0, 0, 0, 0, 1, 0, 0, 0, 0, 0},
-        {0, 2, 2, 0, 1, 0, 0, 0, 0, 0},
         {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-        {0, 0, 0, 0, 0, 4, 4, 4, 4, 0},
         {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-        {0, 0, 0, 0, 0, 0, 5, 0, 0, 0},
-        {0, 0, 0, 0, 3, 0, 5, 0, 0, 0},
-        {0, 0, 0, 0, 3, 0, 0, 0, 0, 0},
-        {0, 0, 0, 0, 3, 0, 0, 0, 0, 0}
+        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
 };
 
 
+int score() {
+    for (int ligne = 0; ligne < 10; ++ligne) {
+        for (int col = 0; col < 10; ++col) {
+            return tableau_adverse[ligne][col];
+        }
+    }
+}
 
 
-
-void AffichageTableau(){
+void AffichageTableau() {
     printf("\n\n        --------Bataille Navale--------\n\n\n");
     printf("   |_A_|_B_|_C_|_D_|_E_|_F_|_G_|_H_|_I_|_J_|");
 
     for (int li = 0; li < 10; li++) {
         printf("\n%2d |", li + 1);
         for (int col = 0; col < 10; col++) {
-            if (tableau_adverse[li][col] >= 0 && tableau_adverse[li][col] <=5) {
+            if (tableau_adverse[li][col] >= 0 && tableau_adverse[li][col] <= 5) {
                 printf("___|");
             }
             if (tableau_adverse[li][col] == 10) {
@@ -51,7 +57,7 @@ void AffichageTableau(){
 }
 
 
-void DemandeJouer(){
+void DemandeJouer() {
     do {
         printf("\n\nQuelles case veux-tu jouer ?(A-F)");
         scanf("%s", &ligne);
@@ -95,6 +101,7 @@ int main() {
 
     switch (choix) {
         case 1:
+
             break;
         case 2:
             break;
@@ -104,7 +111,7 @@ int main() {
 
                 DemandeJouer();
 
-                if (tableau_adverse[colonne][ligne] == 0) {//changer les chiffres du tableau pour pouvoir afficher l'endroit ou j'ai tirer
+                if (tableau_adverse[colonne][ligne] == 0) { //changer les chiffres du tableau pour pouvoir afficher l'endroit ou j'ai tirer
                     tableau_adverse[colonne][ligne] = 10;
                 }
                 if (tableau_adverse[colonne][ligne] == 1) {
@@ -122,7 +129,7 @@ int main() {
                 if (tableau_adverse[colonne][ligne] == 5) {
                     tableau_adverse[colonne][ligne] = 15;
                 }
-            } while (1 == 1);
+            } while (score() >= 1 && score() <= 5);
         default:
             printf(" \nMerci et au revoir !\n");
             return 0;
