@@ -1,0 +1,10 @@
+le but du jeu est de faire couler tout les bateaux adverses avant que
+votre adversaire coulent les votres.
+
+vous devez indiquer une case contenu dans la grille
+(de A à J pour la colonne) (de 1 à 10 pour la ligne).
+
+quand le bateau est touché, c'est se symbole qui s'affiche : *
+quand vous touché l'eau, c'est se symbole qui s'affiche :  o
+
+il y à 5 bateau aux total, 1 de 2 case, 2 de 3 case, 1 de 4 case, 1 de 5 case.
